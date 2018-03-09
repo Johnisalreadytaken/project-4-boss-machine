@@ -2,16 +2,16 @@ const express = require('express');
 const apiRouter = express.Router();
 
 // define minions route
-const minionRouter = require('/server/minionRouter.js');
-app.use('/minions', minionRouter);
+const minionRouter = require('./minionRouter.js');
+apiRouter.use('/minions', minionRouter);
 
 // define ideas Route
-const ideaRouter = require('/server/ideaRouter.js');
-app.use('/ideas', ideaRouter);
+const ideaRouter = require('./ideaRouter.js');
+apiRouter.use('/ideas', ideaRouter);
 
 // define meetings Router
-const meetingRouter = require('/server/meetingRouter.js');
-app.use('/meetings', meetingRouter);
+const meetingRouter = require('./meetingRouter.js');
+apiRouter.use('/meetings', meetingRouter);
 
 
 module.exports = apiRouter;
